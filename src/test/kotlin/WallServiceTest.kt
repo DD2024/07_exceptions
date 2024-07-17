@@ -9,7 +9,10 @@ class WallServiceTest {
         service.add(post)
 
         val comment = Comment(1, 1, "text of comment")
-        val com = service.createComment(2,  comment)
-        println(com)
+        val createdCommentFail = service.createComment(2,  comment)
+        println(createdCommentFail)
+
+        val createdCommentSuccess = service.createComment(1,  comment)
+        println(createdCommentSuccess)
     }
 }
