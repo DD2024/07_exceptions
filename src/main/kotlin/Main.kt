@@ -12,7 +12,7 @@ fun main() {
     service.add(post)
 
     val comment = Comment(1, 1, "text of comment")
-    val com = service.createComment(2,  comment)
+    val com = service.createComment(1,  comment)
     println(com)
 }
 

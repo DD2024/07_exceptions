@@ -1,6 +1,6 @@
 import org.junit.Test
 
-class WallServiceTest {
+class WallServiceTestFail {
 
     @Test(expected = PostNotFoundException::class)
     fun createComment() {
@@ -9,10 +9,7 @@ class WallServiceTest {
         service.add(post)
 
         val comment = Comment(1, 1, "text of comment")
-        val createdCommentFail = service.createComment(2,  comment)
+        val createdCommentFail = service.createComment(1, comment)
         println(createdCommentFail)
-
-        val createdCommentSuccess = service.createComment(1,  comment)
-        println(createdCommentSuccess)
     }
 }
